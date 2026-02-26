@@ -14,7 +14,8 @@ const HomePage: React.FC = () => {
           <p className="text-muted mb-4">
             Онлайн магазин за хардуерни компоненти, лаптопи и компютърна периферия
           </p>
-          <Button size="lg" onClick={() => navigate("/category/cpu")}>
+
+          <Button size="lg" onClick={() => navigate("/category/all")}>
             Разгледай продуктите
           </Button>
         </Container>
@@ -30,14 +31,17 @@ const HomePage: React.FC = () => {
             <Card className="h-100 shadow-sm text-center">
               <Card.Body>
                 <i className="bi bi-cpu display-4 text-primary"></i>
-                <h5 className="mt-3">Хардуерни компоненти</h5>
+
+                <h5 className="mt-3">Хардуер</h5>
+
                 <p className="text-muted small">
                   Процесори, видео карти, RAM, SSD
                 </p>
+
                 <Button
                   variant="outline-primary"
                   size="sm"
-                  onClick={() => navigate("/category/cpu")}
+                 onClick={() => navigate("/hardware")}
                 >
                   Разгледай
                 </Button>
@@ -50,14 +54,17 @@ const HomePage: React.FC = () => {
             <Card className="h-100 shadow-sm text-center">
               <Card.Body>
                 <i className="bi bi-mouse display-4 text-success"></i>
+
                 <h5 className="mt-3">Периферия</h5>
+
                 <p className="text-muted small">
-                  Мишки, клавиатури, слушалки, монитори
+                  Мишки, клавиатури, слушалки
                 </p>
+
                 <Button
                   variant="outline-success"
                   size="sm"
-                  onClick={() => navigate("/category/monitors")}
+                  onClick={() => navigate("/category/accessories")}
                 >
                   Разгледай
                 </Button>
@@ -70,10 +77,13 @@ const HomePage: React.FC = () => {
             <Card className="h-100 shadow-sm text-center">
               <Card.Body>
                 <i className="bi bi-laptop display-4 text-warning"></i>
+
                 <h5 className="mt-3">Лаптопи</h5>
+
                 <p className="text-muted small">
                   Бизнес, гейминг и мултимедия
                 </p>
+
                 <Button
                   variant="outline-warning"
                   size="sm"
@@ -90,10 +100,13 @@ const HomePage: React.FC = () => {
             <Card className="h-100 shadow-sm text-center">
               <Card.Body>
                 <i className="bi bi-controller display-4 text-danger"></i>
+
                 <h5 className="mt-3">Гейминг</h5>
+
                 <p className="text-muted small">
-                  Гейминг аксесоари и конфигурации
+                  Аксесоари и хардуер за гейминг
                 </p>
+
                 <Button
                   variant="outline-danger"
                   size="sm"

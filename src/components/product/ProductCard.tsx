@@ -4,6 +4,7 @@ import { Card, Button } from 'react-bootstrap';
 import { Product } from '../../types';
 import { useCart } from '../../contexts/CartContext';
 
+
 interface ProductCardProps {
   product: Product;
 }
@@ -37,10 +38,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           <div>
             {product.originalPrice && (
               <span className="text-decoration-line-through text-muted me-2">
-                {product.originalPrice} лв.
+                {product.originalPrice} €
+
               </span>
             )}
-            <span className="fw-bold text-primary">{product.price} лв.</span>
+            <span className="fw-bold text-primary">{product.price} €</span>
           </div>
           <Button 
             variant="primary" 

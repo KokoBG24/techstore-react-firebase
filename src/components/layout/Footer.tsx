@@ -14,12 +14,6 @@ const Footer: React.FC = () => {
               Вашият доверен партньор за всички електронни устройства и аксесоари. 
               Качество, гаранция и конкурентни цени.
             </p>
-            <div className="mt-4">
-              <a href="#" className="social-icon"><i className="bi bi-facebook"></i></a>
-              <a href="#" className="social-icon"><i className="bi bi-instagram"></i></a>
-              <a href="#" className="social-icon"><i className="bi bi-twitter"></i></a>
-              <a href="#" className="social-icon"><i className="bi bi-youtube"></i></a>
-            </div>
           </Col>
           
           <Col md={2} className="mb-4">
@@ -40,6 +34,22 @@ const Footer: React.FC = () => {
               <li><a href="#" className="text-muted text-decoration-none">Връщане</a></li>
               <li><a href="#" className="text-muted text-decoration-none">Гаранция</a></li>
             </ul>
+
+            {/* 🔥 Социални икони под Поддръжка */}
+            <div className="d-flex gap-3 mt-3">
+              <a href="#" className="footer-social facebook">
+                <i className="bi bi-facebook"></i>
+              </a>
+              <a href="#" className="footer-social instagram">
+                <i className="bi bi-instagram"></i>
+              </a>
+              <a href="#" className="footer-social twitter">
+                <i className="bi bi-twitter"></i>
+              </a>
+              <a href="#" className="footer-social youtube">
+                <i className="bi bi-youtube"></i>
+              </a>
+            </div>
           </Col>
           
           <Col md={2} className="mb-4">

@@ -4,38 +4,7 @@ import { Product } from '../types';
 
 // Продукти за добавяне (взети от CategoryPage.tsx)
 const productsToAdd: Omit<Product, 'id'>[] = [
-  // Смартфони
-  {
-    name: 'Samsung Galaxy S23',
-    price: 1359,
-    originalPrice: 1599,
-    image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c21hcnRwaG9uZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
-    description: 'Най-новият флагман на Samsung с подобрена камера',
-    category: 'smartphones',
-    inStock: true,
-    discount: 15,
-    features: ['5G', '128GB', 'Android', '120Hz display']
-  },
-  {
-    name: 'iPhone 14 Pro',
-    price: 2299,
-    image: 'https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGlwaG9uZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
-    description: 'Мощен iPhone с Dynamic Island и камера 48MP',
-    category: 'smartphones',
-    inStock: true,
-    features: ['iOS', '256GB', '5G', 'A16 Bionic']
-  },
-  {
-    name: 'Google Pixel 7',
-    price: 1039,
-    originalPrice: 1299,
-    image: 'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c21hcnRwaG9uZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
-    description: 'Отличен Android телефон с чиста версия на системата',
-    category: 'smartphones',
-    inStock: true,
-    discount: 20,
-    features: ['Android', '128GB', '5G', 'Google Tensor']
-  },
+
   // Лаптопи
   {
     name: 'MacBook Pro 14"',
@@ -57,27 +26,7 @@ const productsToAdd: Omit<Product, 'id'>[] = [
     discount: 10,
     features: ['Windows 11', '16GB RAM', '512GB SSD', 'Intel i7']
   },
-  // Аксесоари
-  {
-    name: 'Sony WH-1000XM4',
-    price: 459,
-    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGVhZHBob25lc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
-    description: 'Безжични слушалки с шумоподавяне',
-    category: 'accessories',
-    inStock: true,
-    features: ['Безжични', 'Шумоподавяне', '30ч батерия', 'Bluetooth']
-  },
-  {
-    name: 'Apple Watch Series 8',
-    price: 599,
-    originalPrice: 799,
-    image: 'https://images.unsplash.com/photo-1434493652605-87d25f6e7e5c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2F0Y2h8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60',
-    description: 'Умен часовник с функции за здраве и фитнес',
-    category: 'accessories',
-    inStock: true,
-    discount: 25,
-    features: ['GPS', 'Следене на сън', 'Сърдечен ритъм', 'iOS']
-  },
+
   // Гейминг
   {
     name: 'PlayStation 5',

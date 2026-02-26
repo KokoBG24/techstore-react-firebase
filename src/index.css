@@ -11,3 +11,81 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* 🔥 SOCIAL ICONS */
+
+.social-icon {
+  font-size: 1.5rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.social-icon.instagram {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+}
+
+.social-icon.facebook {
+  background: #1877f2;
+}
+
+.social-icon.linkedin {
+  background: #0a66c2;
+}
+
+.social-icon:hover {
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+/* FOOTER SOCIAL ICONS */
+
+.footer-social {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-social.facebook {
+  background: #1877f2;
+}
+
+.footer-social.instagram {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+}
+
+.footer-social.twitter {
+  background: #1da1f2;
+}
+
+.footer-social.youtube {
+  background: #ff0000;
+}
+
+.footer-social:hover {
+  transform: scale(1.15);
+}
+/* PROMO CARD EFFECT */
+
+.promo-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+}
+
+.promo-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}

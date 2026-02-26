@@ -33,6 +33,8 @@ import AdminOrdersPage from "./pages/Admin/AdminOrdersPage";
 import ForgotPasswordPage from "./pages/Auth/ForgotPasswordPage";
 import PromotionsPage from "./pages/Promotions/PromotionsPage";
 import AboutPage from "./pages/About/AboutPage";
+import HardwarePage from "./pages/Category/HardwarePage";
+import PeripheralsPage from "./pages/Category/PeripheralsPage";
 
   
 
@@ -63,7 +65,9 @@ function App() {
                 <Route path="/forgot-password" element={<ForgotPasswordPage />} />
                 <Route path="/promotions" element={<PromotionsPage />} />
                 <Route path="/about" element={<AboutPage />} />
-
+                {/* Categories */}
+                <Route path="/hardware" element={<HardwarePage />} />
+                <Route path="/category/peripherals" element={<PeripheralsPage />} />
 
               </Routes>
             </Container>

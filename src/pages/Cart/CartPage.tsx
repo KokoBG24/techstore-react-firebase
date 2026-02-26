@@ -151,7 +151,7 @@ const CartPage: React.FC = () => {
                     </div>
 
                     <span className="text-muted">
-                      = {(item.product.price * item.quantity).toFixed(2)} лв.
+                      = {(item.product.price * item.quantity).toFixed(2)} €
                     </span>
                   </div>
                 </div>

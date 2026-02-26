@@ -9,6 +9,7 @@ import {
   deleteDoc,
   query,
   where,
+  orderBy,
 } from "firebase/firestore";
 import { db } from "./firebase";
 
@@ -33,6 +34,7 @@ export const getProducts = async (): Promise<Product[]> => {
     return [];
   }
 };
+
 
 export const getProductsByCategory = async (category: string): Promise<Product[]> => {
   try {
@@ -93,5 +95,6 @@ export const deleteProduct = async (id: string): Promise<boolean> => {
     return false;
   }
 };
+
 console.log("Loading products from Firestore...");
 

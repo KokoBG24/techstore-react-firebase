@@ -16,19 +16,6 @@ import { Product } from "../../types";
 import { getProducts } from "../../services/productService";
 import { useAuth } from "../../contexts/AuthContext";
 
-const testProducts: Product[] = [
-  {
-    id: "1",
-    name: "Samsung Galaxy S23",
-    price: 1359,
-    image:
-      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
-    description: "",
-    category: "smartphones",
-    inStock: true,
-    features: [],
-  },
-];
 
 const Navigation: React.FC = () => {
   const { cartItems } = useCart();
@@ -46,17 +33,12 @@ const Navigation: React.FC = () => {
 
   try {
     const allProducts = await getProducts();
-    const productsToSearch = allProducts.length > 0 ? allProducts : testProducts;
 
     setSearchQuery(q);
-    performSearch(productsToSearch, q);
+    performSearch(allProducts, q);
     navigate(`/search?q=${encodeURIComponent(q)}`);
   } catch (error) {
     console.error("Error loading products for search:", error);
-
-    setSearchQuery(q);
-    performSearch(testProducts, q);
-    navigate(`/search?q=${encodeURIComponent(q)}`);
   }
 };
 
@@ -80,41 +62,61 @@ return (
         <Nav className="me-auto">
           <Nav.Link as={Link} to="/">Начало</Nav.Link>
 
-          {/* ✅ ONE dropdown only */}
-          <NavDropdown title="Категории" id="navbarDropdown">
-            <NavDropdown.Header>Хардуерни компоненти</NavDropdown.Header>
-            <NavDropdown.Item as={Link} to="/category/cpu">Процесори</NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="/category/gpu">Видео карти</NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="/category/motherboards">Дънни платки</NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="/category/ram">RAM памет</NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="/category/storage">SSD / HDD</NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="/category/psu">Захранвания</NavDropdown.Item>
+        {/* ✅ ONE dropdown only */}
+<NavDropdown title="Категории" id="navbarDropdown">
 
-            <NavDropdown.Divider />
+  {/* HARDWARE */}
+  <NavDropdown.Header>Хардуер</NavDropdown.Header>
+<NavDropdown.Item as={Link} to="/hardware">
+  Всички хардуерни компоненти
+</NavDropdown.Item>
 
-            <NavDropdown.Header>Периферия</NavDropdown.Header>
-            <NavDropdown.Item as={Link} to="/category/monitors">Монитори</NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="/category/keyboards">Клавиатури</NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="/category/mice">Мишки</NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="/category/headsets">Слушалки</NavDropdown.Item>
+<NavDropdown.Divider />
+  <NavDropdown.Divider />
 
-            <NavDropdown.Divider />
+  {/* PERIPHERALS */}
+  <NavDropdown.Header>Периферия</NavDropdown.Header>
 
-            <NavDropdown.Header>Други</NavDropdown.Header>
-            <NavDropdown.Item as={Link} to="/category/laptops">Лаптопи</NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="/category/gaming">Гейминг</NavDropdown.Item>
-          </NavDropdown>
+  <NavDropdown.Item as={Link} to="/category/monitors">
+    Монитори
+  </NavDropdown.Item>
 
-          <Nav.Link as={Link} to="/promotions">Промоции</Nav.Link>
-          <Nav.Link as={Link} to="/about">За нас</Nav.Link>
+  <NavDropdown.Item as={Link} to="/category/keyboards">
+    Клавиатури
+  </NavDropdown.Item>
 
-          {/* USER ORDERS */}
-          {user && (
-            <Nav.Link as={Link} to="/orders">
-              Моите поръчки
-            </Nav.Link>
-          )}
+  <NavDropdown.Item as={Link} to="/category/mice">
+    Мишки
+  </NavDropdown.Item>
 
+  <NavDropdown.Item as={Link} to="/category/headsets">
+    Слушалки
+  </NavDropdown.Item>
+
+  <NavDropdown.Divider />
+
+  {/* OTHER */}
+  <NavDropdown.Header>Други</NavDropdown.Header>
+
+  <NavDropdown.Item as={Link} to="/category/laptops">
+    Лаптопи
+  </NavDropdown.Item>
+
+  <NavDropdown.Item as={Link} to="/category/gaming">
+    Гейминг
+  </NavDropdown.Item>
+
+</NavDropdown>
+
+<Nav.Link as={Link} to="/promotions">Промоции</Nav.Link>
+<Nav.Link as={Link} to="/about">За нас</Nav.Link>
+
+{/* USER ORDERS */}
+{user && (
+  <Nav.Link as={Link} to="/orders">
+    Моите поръчки
+  </Nav.Link>
+)}
           {/* ADMIN */}
           {role === "admin" && (
             <NavDropdown title="Админ" id="adminDropdown">
