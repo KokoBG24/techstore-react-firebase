@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useState } from "react";
 import { Container, Button, Card, Alert, Form, Row, Col } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
@@ -19,7 +19,7 @@ const CartPage: React.FC = () => {
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
 
-  const total = useMemo(() => getTotalPrice(), [cartItems, getTotalPrice]);
+  const total = getTotalPrice();
   const totalQty = useMemo(() => cartItems.reduce((t, i) => t + i.quantity, 0), [cartItems]);
 
   const handleOrder = async () => {
